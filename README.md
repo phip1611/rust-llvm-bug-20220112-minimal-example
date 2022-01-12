@@ -32,3 +32,22 @@ Build with `§ cargo build`. It will output: \
 ```
 
 This is possibly linked to https://github.com/rust-lang/rust/issues/62729
+- Working workaround from that issue: 
+```rust
+#[no_mangle]
+fn fminf(a: f32, b: f32) -> f32 {
+    if a < b {
+        a
+    } else {
+        b
+    }
+}
+
+#[no_mangle]
+fn fmaxf(a: f32, b: f32) -> f32 {
+    if a > b {
+        a
+    } else {
+        b
+    }
+}```

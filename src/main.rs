@@ -33,6 +33,24 @@ fn entry_rust(_: u32, _: u32) -> ! {
     loop {}
 }
 
+#[no_mangle]
+fn fminf(a: f32, b: f32) -> f32 {
+    if a < b {
+        a
+    } else {
+        b
+    }
+}
+
+#[no_mangle]
+fn fmaxf(a: f32, b: f32) -> f32 {
+    if a > b {
+        a
+    } else {
+        b
+    }
+}
+
 struct GlobalAllocator;
 #[global_allocator]
 static ALLOC: GlobalAllocator = GlobalAllocator;
