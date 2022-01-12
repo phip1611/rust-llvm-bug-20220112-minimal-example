@@ -14,6 +14,7 @@ Build with `§ cargo build`. It will output: \
 - after disabling the `simd`-feature of `fontdue` the LLVM error message is gone
   and the error message is now:
 
+
 ```text
 -20220112-minimal-example/target/x86_64-none-bare_metal/debug/deps/kernel_bin-b2e3b701572fd441" "--gc-sections"
   = note: rust-lld: error: undefined symbol: fmaxf
@@ -29,3 +30,5 @@ Build with `§ cargo build`. It will output: \
           >>>               ttf_parser-6b7cd33f39fc07ca.ttf_parser.7b1c2514-cgu.7.rcgu.o:(core::f32::_$LT$impl$u20$f32$GT$::min::h47ed670ba851f6e4) in archive /home/pschuster/dev/other/rust-llvm-bug-20220112-minimal-example/target/x86_64-none-bare_metal/debug/deps/libttf_parser-6b7cd33f39fc07ca.rlib
 
 ```
+
+This is possibly linked to https://github.com/rust-lang/rust/issues/62729
