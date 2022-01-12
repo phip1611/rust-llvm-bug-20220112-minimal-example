@@ -29,7 +29,7 @@ fn entry_rust(_: u32, _: u32) -> ! {
     // actually compiles
     let _ = hashbrown::HashMap::<f32, f32>::new();
     // breaks build with: LLVM ERROR: Do not know how to split the result of this operator!
-    let _ = fontdue::Font::from_bytes([0], fontdue::FontSettings::default());
+    let _ = fontdue::Font::from_bytes(&[0][..], fontdue::FontSettings::default());
     loop {}
 }
 

@@ -22,8 +22,7 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 [[package]]
 name = "fontdue"
 version = "0.6.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8669141fd879e023ac6fcfe1d90dfe3f83ca7e322781ddf3f5be59147e4b8113"
+source = "git+https://github.com/mooman219/fontdue.git#a7e02e9e4964e976520722dd2fdb7f8a6a41ad3b"
 dependencies = [
  "hashbrown",
  "ttf-parser",

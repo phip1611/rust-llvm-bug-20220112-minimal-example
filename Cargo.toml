@@ -13,4 +13,9 @@ publish = false
 
 [dependencies]
 hashbrown = "0.11.2"
-fontdue = "0.6.2"
+fontdue = { git = "https://github.com/mooman219/fontdue.git", default-features = false }
+# AHH that's tricky/a pitfall. The GitHub version is newer and cleaned up the "simd"-feature
+# but it was not yet released to crates.io. Therefore 0.6.2 from GitHub is different to
+# 0.6.2 from crates.io.
+#
+# fontdue = { version = "0.6.2", default-features = false }
