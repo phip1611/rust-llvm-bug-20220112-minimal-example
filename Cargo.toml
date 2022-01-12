@@ -1,0 +1,16 @@
+[package]
+name = "kernel-bin"
+description = """
+A kernel binary that can be loaded as Multiboot2 payload by GRUB.
+It works on x86_64 platforms with UEFI as firmware.
+"""
+version = "0.1.0"
+authors = ["Philipp Schuster <phip1611@gmail.com>"]
+edition = "2021"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hashbrown = "0.11.2"
+fontdue = "0.6.2"
